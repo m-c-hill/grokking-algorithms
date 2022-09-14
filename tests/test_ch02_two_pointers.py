@@ -1,6 +1,6 @@
 import pytest
-from chapters.ch02_two_pointers import *
 
+from chapters.ch02_two_pointers import *
 
 # ==============================================
 #  Problems

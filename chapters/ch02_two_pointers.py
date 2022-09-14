@@ -1,6 +1,6 @@
+import math
 from collections import deque
 from typing import List
-import math
 
 # =====================
 #  Problems

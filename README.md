@@ -185,12 +185,12 @@ Example: `arr = [1, 2, 5, 3, 7, 10, 9, 12] -> Output = 5`
   - the fast pointer is one two steps behind the slow pointer.
 - All distances between pointers reduces to one of these two scenarios.
 
-
 General method:
-  - Initialise *f* and *s* at head of the list.
-  - Move f forward two, s forward one.
-  - If f == s, return true.
-  - If f is null, return false.
+
+- Initialise _f_ and _s_ at head of the list.
+- Move f forward two, s forward one.
+- If f == s, return true.
+- If f is null, return false.
 
 #### Problem 1 - LinkedList Cycle ✅
 
@@ -235,6 +235,57 @@ Write a method to determine if the array has a cycle. The cycle should have more
 
 ---
 
-### [Chapter 4 - Fast and Slow ](chapters/ch03_fast_and_slow_pointers.py)
+### [Chapter 4 - Merge Intervals ](chapters/ch04_merge_intervals.py)
 
-**Completed:** 6 / 7
+**Completed:** 0 / 7
+
+- Technique to deal with overlapping intervals. This allows us to find overlaps or to merge intervals if they overlap.
+- Given intervals `a` and `b`, there will be six different ways these two intervals can relate to each other:
+  - `a` and `b` do no overlap, `b` ends after `a`
+  - `a` and `b` overlap, `b` ends after `a`
+  - `a` completely overlaps `b`
+  - `a` and `b` overlap, `a` ends after `b`
+  - `b` completely overlaps `a`
+  - `a` and `b` do not overlap, `a` ends after `b`
+
+#### Problem 1 - Merge Intervals
+
+Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
+
+Example: `intervals = [[1,4], [2,5], [7,9]] -> Output = [[1,5], [7,9]]`
+
+#### Problem 2 - Insert Interval
+
+Given a list of non-overlapping intervals sorted by their start time, insert a given interval at the correct position and merge all necessary intervals to produce a list that has only mutually exclusive intervals.
+
+Example: `intervals = [[1,3], [5,7], [8,12]], new interval = [4,6] -> Output = [[1,3], [4,7], [8,12]]`
+
+#### Problem 3 - Intervals Intersection
+
+Given two lists of intervals, find the intersection of these two lists. Each list consists of disjoint intervals sorted on their start time.
+
+Example: `arr1=[[1, 3], [5, 6], [7, 9]], arr2=[[2, 3], [5, 7]] -> Output = [2, 3], [5, 6], [7, 7]`
+
+#### Problem 4 - Conflicting Appointments
+
+Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
+
+Example: `appointments = [[1,4], [2,5], [7,9]] -> Output = false`
+
+#### Challenge Problem 1 - Problem Challenge 1: Minimum Meeting Rooms
+
+Given a list of intervals representing the start and end time of ‘N’ meetings, find the minimum number of rooms required to hold all the meetings.
+
+Example: `meetings = [[1,4], [2,5], [7,9]] -> Output = 2`
+
+#### Challenge Problem 2 - Maximum CPU Load
+
+We are given a list of Jobs. Each job has a Start time, an End time, and a CPU load when it is running. Our goal is to find the maximum CPU load at any time if all the jobs are running on the same machine.
+
+Example: `jobs = [[1,4,3], [2,5,4], [7,9,6]] -> Output = 7`
+
+#### Challenge Problem 3 - Problem Challenge 3: Employee Free Time
+
+For ‘K’ employees, we are given a list of intervals representing each employee’s working hours. Our goal is to determine if there is a free interval which is common to all employees. You can assume that each list of employee working hours is sorted on the start time.
+
+Example: `Employee Working Hours=[[[1,3], [5,6]], [[2,3], [6,8]]] -> Output: [3,5]`
