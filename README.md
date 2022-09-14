@@ -95,7 +95,7 @@ Example: `String="catfoxcat", Words=["cat", "fox"] -> Output = [0, 3]`
 
 - Used on _sorted arrays_ to find a set of elements which fulfil certain constraints.
 - In general, two pointers are either:
-  - initiated at the extreme ends of the array and are incremented toward the centre, 
+  - initiated at the extreme ends of the array and are incremented toward the centre,
   - initiated in the centre of the array to then moved outwards,
   - initiated at the start of the array and then move to the right.
 
@@ -170,3 +170,71 @@ Example: `str1 = "xy#z", str2 = "xzz#" -> Output = True`
 Given an array, find the length of the smallest subarray in it which when sorted will sort the whole array.
 
 Example: `arr = [1, 2, 5, 3, 7, 10, 9, 12] -> Output = 5`
+
+---
+
+### [Chapter 3 - Fast and Slow ](chapters/ch03_fast_and_slow_pointers.py)
+
+**Completed:** 6 / 7
+
+- Two pointers move through an arrray or linked list at different speeds.
+- By moving at different speeds, the algorithm proves that two pointers are bound to meet.
+- If a linked list does not have a cycle, the fast pointer will reach the end before the slow pointer. The slow pointer never catches up.
+- If there **is** a cycle, the pointers will meet. Just before they meet, either:
+  - the fast pointer is one step behind the slow pointer
+  - the fast pointer is one two steps behind the slow pointer.
+- All distances between pointers reduces to one of these two scenarios.
+
+
+General method:
+  - Initialise *f* and *s* at head of the list.
+  - Move f forward two, s forward one.
+  - If f == s, return true.
+  - If f is null, return false.
+
+#### Problem 1 - LinkedList Cycle ✅
+
+Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
+
+#### Problem 2 - Start of LinkedList Cycle ✅
+
+Given the head of a Singly LinkedList that contains a cycle, write a function to find the starting node of the cycle.
+
+Source: https://www.youtube.com/watch?v=86_tqjlcgNs
+
+#### Problem 3 - Happy Numbers ✅
+
+A number is a happy number if, after repeatedly replacing it with a number equal to the sum of the square of all of its digits, leads us to number 1.
+
+For example, 23 is a happy number since:
+
+2<sup>2</sup> + 3<sup>2</sup> = 4 + 9 = 13
+1<sup>2</sup> + 3<sup>2</sup> = 1 + 9 = 10
+1<sup>2</sup> + 0<sup>2</sup> = 1 + 0 = 1
+
+#### Problem 4 - Middle of Linked List ✅
+
+Given the head of a Singly LinkedList, write a method to return the middle node of the LinkedList.
+
+#### Problem Challenge 1: Palindrome LinkedList ✅
+
+Given the head of a Singly LinkedList, write a method to check if the LinkedList is a palindrome or not.
+
+#### Problem Challenge 2: Rearrange a LinkedList ✅
+
+Given the head of a Singly LinkedList, write a method to modify the LinkedList such that the nodes from the second half of the LinkedList are inserted alternately to the nodes from the first half in reverse order.
+
+#### Problem Challenge 3: Cycle in a Circular Array ❌
+
+We are given an array containing positive and negative numbers. Suppose the array contains a number ‘M’ at a particular index. Now, if ‘M’ is positive we will move forward ‘M’ indices and if ‘M’ is negative move backwards ‘M’ indices. You should assume that the array is circular which means two things:
+
+- If, while moving forward, we reach the end of the array, we will jump to the first element to continue the movement.
+- If, while moving backward, we reach the beginning of the array, we will jump to the last element to continue the movement.
+
+Write a method to determine if the array has a cycle. The cycle should have more than one element and should follow one direction which means the cycle should not contain both forward and backward movements.
+
+---
+
+### [Chapter 4 - Fast and Slow ](chapters/ch03_fast_and_slow_pointers.py)
+
+**Completed:** 6 / 7

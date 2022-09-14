@@ -93,3 +93,44 @@ def test_dutch_flag_sort(arr, expected):
 # ==============================================
 #  Problem Challenges
 # ==============================================
+
+# # Problem Challenge 1
+# @pytest.mark.parametrize(
+#     "arr,k,expected",
+#     [
+#         ([4, 1, 2, -1, 1, -3], 1, [[-3, -1, 1, 4], [-3, 1, 1, 2]]),
+#         ([2, 0, -1, 1, -2, 2], 2, [[-2, 0, 2, 2], [-1, 0, 1, 2]]),
+#     ],
+# )
+# def test_search_quadruplets(arr, k, expected):
+#     res = search_quadruplets(arr, k)
+#     assert res == expected
+
+
+# # Problem Challenge 2
+# @pytest.mark.parametrize(
+#     "str1,str2,expected",
+#     [
+#         ("xy#z", "xzz#", True),
+#         ("xy#z", "xyz#", False),
+#         ("xp#", "xyz##", True),
+#         ("xywrrmp", "xywrrmu#p", True),
+#     ],
+# )
+# def test_backspace_compare(str1, str2, expected):
+#     res = backspace_compare(str1, str2)
+#     assert res == expected
+
+# # Problem Challenge 3
+# @pytest.mark.parametrize(
+#     "arr,expected",
+#     [
+#         ([1, 2, 5, 3, 7, 10, 9, 12], 5),
+#         ([1, 3, 2, 0, -1, 7, 10], 5),
+#         ([1, 2, 3], 0),
+#         ([3, 2, 1], 3),
+#     ],
+# )
+# def test_shortest_window_sort(arr, expected):
+#     res = shortest_window_sort(arr)
+#     assert res == expected
