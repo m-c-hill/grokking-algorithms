@@ -1,6 +1,10 @@
-from tracemalloc import start
 from typing import List
 import math
+
+
+# =====================
+#  Problems
+# =====================
 
 
 # Problem 1 - Maximum Sum of Size 'K' Subarray
@@ -73,11 +77,11 @@ def fruit_in_baskets(fruit_trees: List[str]) -> int:
     """Maximise the amount of fruit picked from a line of trees into two baskets"""
 
     NUMBER_OF_BASKETS = 2
-    
+
     window_start = 0
     current_fruit_count = 0
     max_total_fruit = 0
-    fruit_counter={}
+    fruit_counter = {}
 
     for window_end in range(len(fruit_trees)):
         current_fruit = fruit_trees[window_end]
@@ -115,7 +119,7 @@ def longest_substring_with_distinct_characters(s: str) -> int:
         char_index_map[current_char] = window_end
         window_length = window_end - window_start + 1
         max_substring_length = max(max_substring_length, window_length)
-    
+
     return max_substring_length
 
 
@@ -125,7 +129,6 @@ def find_longest_substring_after_replacement(s: str, k: int) -> int:
     max_substring_length = 0
     max_repeating_char_count = 0
     char_frequency_map = {}
-    
 
     for window_end in range(len(s)):
         current_char = s[window_end]
@@ -146,11 +149,12 @@ def find_longest_substring_after_replacement(s: str, k: int) -> int:
             if char_frequency_map[left_char] == 0:
                 del char_frequency_map[left_char]
             window_start += 1
-        
+
         new_window_length = window_end - window_start + 1
         max_substring_length = max(max_substring_length, new_window_length)
 
     return max_substring_length
+
 
 # Problem 7 - Longest Subarray with Ones after Replacement
 def find_longest_substring_with_ones_after_replacement(arr: List[int], k: int) -> int:
@@ -182,9 +186,20 @@ def find_longest_substring_with_ones_after_replacement(arr: List[int], k: int) -
 # =====================
 
 # Problem Challenge 1 - Permutation in a String
+def permutation_in_a_string():
+    pass
+
 
 # Problem Challenge 2 - String Anagrams
+def string_anagrams():
+    pass
+
 
 # Problem Challenge 3 - Smallest Window containing Substring
+def smallest_window_containing_substring():
+    pass
+
 
 # Problem Challenge 4 - Words Concatenation
+def words_concatenation():
+    pass
