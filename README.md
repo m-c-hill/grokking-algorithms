@@ -237,7 +237,7 @@ Write a method to determine if the array has a cycle. The cycle should have more
 
 ### [Chapter 4 - Merge Intervals ](chapters/ch04_merge_intervals.py)
 
-**Completed:** 0 / 7
+**Completed:** 4 / 7
 
 - Technique to deal with overlapping intervals. This allows us to find overlaps or to merge intervals if they overlap.
 - Given intervals `a` and `b`, there will be six different ways these two intervals can relate to each other:
@@ -248,44 +248,107 @@ Write a method to determine if the array has a cycle. The cycle should have more
   - `b` completely overlaps `a`
   - `a` and `b` do not overlap, `a` ends after `b`
 
-#### Problem 1 - Merge Intervals
+#### Problem 1 - Merge Intervals ✅
 
 Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
 
 Example: `intervals = [[1,4], [2,5], [7,9]] -> Output = [[1,5], [7,9]]`
 
-#### Problem 2 - Insert Interval
+#### Problem 2 - Insert Interval ✅
 
 Given a list of non-overlapping intervals sorted by their start time, insert a given interval at the correct position and merge all necessary intervals to produce a list that has only mutually exclusive intervals.
 
 Example: `intervals = [[1,3], [5,7], [8,12]], new interval = [4,6] -> Output = [[1,3], [4,7], [8,12]]`
 
-#### Problem 3 - Intervals Intersection
+#### Problem 3 - Intervals Intersection ✅
 
 Given two lists of intervals, find the intersection of these two lists. Each list consists of disjoint intervals sorted on their start time.
 
 Example: `arr1=[[1, 3], [5, 6], [7, 9]], arr2=[[2, 3], [5, 7]] -> Output = [2, 3], [5, 6], [7, 7]`
 
-#### Problem 4 - Conflicting Appointments
+#### Problem 4 - Conflicting Appointments ✅
 
 Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
 
 Example: `appointments = [[1,4], [2,5], [7,9]] -> Output = false`
 
-#### Challenge Problem 1 - Problem Challenge 1: Minimum Meeting Rooms
+#### Challenge Problem 1 - Problem Challenge 1: Minimum Meeting Rooms ❌
 
 Given a list of intervals representing the start and end time of ‘N’ meetings, find the minimum number of rooms required to hold all the meetings.
 
 Example: `meetings = [[1,4], [2,5], [7,9]] -> Output = 2`
 
-#### Challenge Problem 2 - Maximum CPU Load
+#### Challenge Problem 2 - Maximum CPU Load ❌
 
 We are given a list of Jobs. Each job has a Start time, an End time, and a CPU load when it is running. Our goal is to find the maximum CPU load at any time if all the jobs are running on the same machine.
 
 Example: `jobs = [[1,4,3], [2,5,4], [7,9,6]] -> Output = 7`
 
-#### Challenge Problem 3 - Problem Challenge 3: Employee Free Time
+#### Challenge Problem 3 - Problem Challenge 3: Employee Free Time ❌
 
 For ‘K’ employees, we are given a list of intervals representing each employee’s working hours. Our goal is to determine if there is a free interval which is common to all employees. You can assume that each list of employee working hours is sorted on the start time.
 
 Example: `Employee Working Hours=[[[1,3], [5,6]], [[2,3], [6,8]]] -> Output: [3,5]`
+
+---
+
+### [Chapter 5 - Cyclic Sort ](chapters/ch05_cyclic_sort.py)
+
+**Completed:** 5 / 8
+
+- For dealing with arrays containing numbers in a given **range**. It is a comparison sorting algorithm which sorts **in-place**.
+- It is optimal in terms of the number of memory writes.
+- Aim is to compare the number at the ith position with the number at the position if this number were the index.
+- General method:
+  - Iterate through the array
+  - At each position, compare the current number to
+
+#### Problem 1 - Cyclic Sort ✅
+
+We are given an array containing n objects. Each object, when created, was assigned a unique number from the range 1 to n based on their creation sequence. This means that the object with sequence number 3 was created just before the object with sequence number 4.
+
+Write a function to sort the objects in-place on their creation sequence number in O(n)O(n) and without using any extra space. For simplicity, let’s assume we are passed an integer array containing only the sequence numbers, though each number is actually an object.
+
+Example: `arr = [3, 1, 5, 4, 2] -> Output = [1, 2, 3, 4, 5]`
+
+#### Problem 2 - Find the Missing Number ✅
+
+We are given an array containing n distinct numbers taken from the range 0 to n. Since the array has only n numbers out of the total n+1 numbers, find the missing number.
+
+Example: `arr = [4, 0, 3, 1] -> Output = 2`
+
+#### Problem 3 - Find all Missing Numbers ✅
+
+We are given an unsorted array containing numbers taken from the range 1 to ‘n’. The array can have duplicates, which means some numbers will be missing. Find all those missing numbers.
+
+Example: `arr = [2, 3, 1, 8, 2, 3, 5, 1] -> Output = [4, 6, 7]`
+
+#### Problem 4 - Find the Duplicate Number ✅
+
+We are given an unsorted array containing ‘n+1’ numbers taken from the range 1 to ‘n’. The array has only one duplicate but it can be repeated multiple times. Find that duplicate number without using any extra space. You are, however, allowed to modify the input array.
+
+Example: `arr = [1, 4, 4, 3, 2] -> Output = 4`
+
+#### Problem 5 - Find All Duplicate Numbers ✅
+
+We are given an unsorted array containing n numbers taken from the range 1 to n. The array has some numbers appearing twice, find all these duplicate numbers using constant space.
+
+Example: `arr = [3, 4, 4, 5, 5] -> Output = [4, 5]`
+
+#### Problem Challenge 1 ❌
+
+We are given an unsorted array containing ‘n’ numbers taken from the range 1 to ‘n’. The array originally contained all the numbers from 1 to ‘n’, but due to a data error, one of the numbers got duplicated which also resulted in one number going missing. Find both these numbers.
+
+Example: `arr = [3, 1, 2, 5, 2] -> Output = [2, 4]`
+
+#### Problem Challenge 2 ❌
+
+Given an unsorted array containing numbers, find the smallest missing positive number in it. **Note**: Positive numbers start from '1'.
+
+Example: `arr = [-3, 1, 5, 4, 2] -> Output = 3`
+
+#### Problem Challenge 3 ❌
+
+Given an unsorted array containing numbers and a number ‘k’, find the first ‘k’ missing positive numbers in the array.
+
+Example: `arr = [3, -1, 4, 5, 5], k = 3 -> Output = [1, 2, 6]`

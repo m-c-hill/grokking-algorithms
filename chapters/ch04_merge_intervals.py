@@ -30,22 +30,24 @@ def merge_intervals(intervals: List[Interval]) -> List[Interval]:
 
 
 # Problem 2 - Insert Interval
-def insert_interval(intervals: List[Interval], new_interval: Interval) -> List[Interval]:
+def insert_interval(
+    intervals: List[Interval], new_interval: Interval
+) -> List[Interval]:
     merged = []
-    
+
     new_interval_start = new_interval.start
     new_interval_end = new_interval.end
     i = 0  # pointer to find position of new interval
 
     while i < len(intervals) and new_interval_start > intervals[i].end:
         merged.append(intervals[i])
-        i+=1
+        i += 1
 
     while i < len(intervals) and new_interval_end >= intervals[i].start:
         new_interval_start = min(new_interval_start, intervals[i].start)
         new_interval_end = max(new_interval_end, intervals[i].end)
         i += 1
-    
+
     merged.append(Interval(new_interval_start, new_interval_end))
 
     while i < len(intervals):
@@ -56,7 +58,9 @@ def insert_interval(intervals: List[Interval], new_interval: Interval) -> List[I
 
 
 # Problem 3 - Interval Intersection
-def intervals_intersection(arr1: List[Interval], arr2: List[Interval]) -> List[Interval]:
+def intervals_intersection(
+    arr1: List[Interval], arr2: List[Interval]
+) -> List[Interval]:
     result = []
     i, j = 0, 0
 
@@ -94,4 +98,3 @@ def conflicting_appointments(appointments: List[Interval]) -> bool:
             return False
 
     return True
-
