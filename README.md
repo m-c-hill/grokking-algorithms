@@ -386,3 +386,54 @@ If, in the end, you are left with a sub-list with less than ‘k’ elements, re
 #### Problem Challenge 2 - Rotate a LinkedList ✅
 
 Given the head of a Singly LinkedList and a number ‘k’, rotate the LinkedList to the right by ‘k’ nodes.
+
+---
+
+### [Chapter 7 - Tree Breadth First Search (BFS)](chapters/ch07_breadth_first_search.py)
+
+**Completed:** 9 / 9
+
+- **Binary Tree:** Data structure consisting of nodes. Each parent node has a left and right child.
+- BFS traverse all nodes at the same level before moving to the next.
+- To do this, a queue is used. Example, representing a tree with arrays:
+  - Push the root to the queue
+  - Iterate through the queue until the queue is empty. With each iteration, count the elements in the queue, N.
+  - Remove N nodes from the queue and push values to an array.
+  - After removing each node, push both its children to the queue.
+  - Continue to iterate until the queue is empty.
+
+#### Problem 1 - Binary Tree Level Order Traversal ✅
+
+Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+
+#### Problem 2 - Reverse Level Order Traversal ✅
+
+Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
+
+#### Problem 3 - Zigzag Traversal ✅
+
+Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level and keep alternating in the same manner for the following levels.
+
+#### Problem 4 - Level Averages in a Binary Tree ✅
+
+Given a binary tree, populate an array to represent the averages of all of its levels.
+
+#### Problem 5 - Minimum Depth of a Binary Tree ✅
+
+Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the shortest path from the root node to the nearest leaf node.
+
+#### Problem 6 - Level Order Successor ✅
+
+Given a binary tree and a node, find the level order successor of the given node in the tree. The level order successor is the node that appears right after the given node in the level order traversal.
+
+#### Problem 7 - Connect Level Order Siblings ✅
+
+Given a binary tree, connect each node with its level order successor. The last node of each level should point to a null node.
+
+#### Problem Challenge 1 - Connect All Level Order Siblings ✅
+
+Given a binary tree, connect each node with its level order successor. The last node of each level should point to the first node of the next level.
+
+#### Problem Challenge 2 - Right View of a Binary Tree ✅
+
+Given a binary tree, return an array containing nodes in its right view. The right view of a binary tree is the set of nodes visible when the tree is seen from the right side.
