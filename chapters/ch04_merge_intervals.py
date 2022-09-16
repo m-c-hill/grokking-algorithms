@@ -1,6 +1,3 @@
-from curses import intrflush
-from telnetlib import NEW_ENVIRON
-from this import d
 from dataclasses.interval import Interval
 from typing import List
 

@@ -1,5 +1,4 @@
 import pytest
-
 from chapters.ch02_two_pointers import *
 
 # ==============================================

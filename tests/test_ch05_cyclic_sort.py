@@ -1,6 +1,6 @@
 from cmath import exp
-import pytest
 
+import pytest
 from chapters.ch05_cyclic_sort import *
 
 

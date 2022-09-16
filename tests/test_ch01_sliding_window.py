@@ -1,5 +1,4 @@
 import pytest
-
 from chapters.ch01_sliding_window import *
 
 # ==============================================

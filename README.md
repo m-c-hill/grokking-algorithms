@@ -352,3 +352,37 @@ Example: `arr = [-3, 1, 5, 4, 2] -> Output = 3`
 Given an unsorted array containing numbers and a number ‘k’, find the first ‘k’ missing positive numbers in the array.
 
 Example: `arr = [3, -1, 4, 5, 5], k = 3 -> Output = [1, 2, 6]`
+
+---
+
+### [Chapter 6 - In-place Linked List Reversal ](chapters/ch06_linked_list_reversal.py)
+
+**Completed:** 5 / 5
+
+- Linked list composed of a nodes, each having a value and a link to the next node.
+- In a lot of problems, we are asked to reverse the links between a set of nodes of a LinkedList. Often, the constraint is that we need to do this in-place, i.e., using the existing node objects and without using extra memory.
+- In-place Reversal of a LinkedList pattern describes an efficient way to solve the above problem.
+
+#### Problem 1 - Reverse a LinkedList ✅
+
+Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
+
+#### Problem 2 - Reverse a Sub-list ✅
+
+Given the head of a LinkedList and two positions ‘p’ and ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
+
+#### Problem 3 - Reverse every K-element Sub-list ✅
+
+Given the head of a LinkedList and a number ‘k’, reverse every ‘k’ sized sub-list starting from the head.
+
+If, in the end, you are left with a sub-list with less than ‘k’ elements, reverse it too.
+
+#### Problem Challenge 1 - Reverse alternating K-element Sub-list ✅
+
+Given the head of a LinkedList and a number ‘k’, reverse every alternating ‘k’ sized sub-list starting from the head.
+
+If, in the end, you are left with a sub-list with less than ‘k’ elements, reverse it too.
+
+#### Problem Challenge 2 - Rotate a LinkedList ✅
+
+Given the head of a Singly LinkedList and a number ‘k’, rotate the LinkedList to the right by ‘k’ nodes.
