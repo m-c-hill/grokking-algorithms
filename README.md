@@ -394,13 +394,17 @@ Given the head of a Singly LinkedList and a number ‘k’, rotate the LinkedLis
 **Completed:** 9 / 9
 
 - **Binary Tree:** Data structure consisting of nodes. Each parent node has a left and right child.
-- BFS traverse all nodes at the same level before moving to the next.
+- A **Binary Search Tree** is an ordered version of a binary tree, in which the left node value is less than the parent node, while the right node is greater than the parent node.
+- In a breadth first search, you start at the root node, and then scan each node in the first level starting from the leftmost node, moving towards the right. Then you continue scanning the second level (starting from the left) and the third level, and so on until you’ve scanned all the nodes, or until you find the actual node that you were searching for.
 - To do this, a queue is used. Example, representing a tree with arrays:
   - Push the root to the queue
   - Iterate through the queue until the queue is empty. With each iteration, count the elements in the queue, N.
   - Remove N nodes from the queue and push values to an array.
   - After removing each node, push both its children to the queue.
   - Continue to iterate until the queue is empty.
+- Use when:
+  - you know the solution is not far from the route of the tree
+  -
 
 #### Problem 1 - Binary Tree Level Order Traversal ✅
 
@@ -437,3 +441,50 @@ Given a binary tree, connect each node with its level order successor. The last 
 #### Problem Challenge 2 - Right View of a Binary Tree ✅
 
 Given a binary tree, return an array containing nodes in its right view. The right view of a binary tree is the set of nodes visible when the tree is seen from the right side.
+
+### [Chapter 8 - Tree Depth First Search (DFS)](chapters/ch08_depth_first_search.py)
+
+**Completed:** 5 / 7
+
+- Alternative binary tree traversal method to breadth first search.
+- In a depth first search, you start at the root, and follow one of the branches of the tree as far as possible until either the node you are looking for is found or you hit a leaf node ( a node with no children). If you hit a leaf node, then you continue the search at the nearest ancestor with unexplored children.
+- The advantage of DFS over BFS is that it has much lower memory requirements as we don't need to store all the child pointers at each level (as we were doing in BFS with a queue).
+- This algorithm has a time complexity of `O(h)` where `h` is the height of the tree.
+
+**BFS vs DFS**
+
+Depending on the data and what you are looking for, either DFS or BFS could be advantageous.
+
+For example, given a family tree if one were looking for someone on the tree who’s still alive, then it would be safe to assume that person would be on the bottom of the tree. This means that a BFS would take a very long time to reach that last level. A DFS, however, would find the goal faster. But, if one were looking for a family member who died a very long time ago, then that person would be closer to the top of the tree. Then, a BFS would usually be faster than a DFS. So, the advantages of either vary depending on the data and what you’re looking for.
+
+#### Problem 1 - Binary Tree Path Sum ✅
+
+Given a binary tree and a number ‘S’, find if the tree has a path from root-to-leaf such that the sum of all the node values of that path equals ‘S’.
+
+#### Problem 2 - All Paths for a Sum ✅
+
+Given a binary tree and a number ‘S’, find all paths from root-to-leaf such that the sum of all the node values of each path equals ‘S’.
+
+#### Problem 3 - Sum of Path Numbers ✅
+
+Given a binary tree where each node can only have a digit (0-9) value, each root-to-leaf path will represent a number. Find the total sum of all the numbers represented by all paths.
+
+#### Problem 4 - Path With Given Sequence ✅
+
+Given a binary tree and a number sequence, find if the sequence is present as a root-to-leaf path in the given tree.
+
+#### Problem 5 - Count Paths for a Sum ❌
+
+Given a binary tree and a number ‘S’, find all paths in the tree such that the sum of all the node values of each path equals ‘S’. Please note that the paths can start or end at any node but all paths must follow direction from parent to child (top to bottom).
+
+#### Problem Challenge 1 - Tree Diameter ✅
+
+Given a binary tree, find the length of its diameter. The diameter of a tree is the number of nodes on the longest path between any two leaf nodes. The diameter of a tree may or may not pass through the root.
+
+Note: You can always assume that there are at least two leaf nodes in the given tree.
+
+#### Problem Challenge 2 - Path with Maximum Sum ❌
+
+Find the path with the maximum sum in a given binary tree. Write a function that returns the maximum sum.
+
+A path can be defined as a sequence of nodes between any two nodes and doesn’t necessarily pass through the root. The path must contain at least one node.
