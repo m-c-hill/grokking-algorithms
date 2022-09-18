@@ -1,5 +1,5 @@
-from heapq import *
 import heapq
+from heapq import *
 from typing import List
 
 

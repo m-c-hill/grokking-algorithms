@@ -1,7 +1,7 @@
 from collections import deque
-
 from dataclasses import TreeNode
 from typing import List, Optional
+
 
 # Problem 1 - Binary Tree Level Order Traversal
 def traverse_and_create_array(root: TreeNode) -> list:

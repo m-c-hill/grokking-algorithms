@@ -1,5 +1,6 @@
-from curses import KEY_LEFT
 import re
+from curses import KEY_LEFT
+
 from data_structures.node import Node
 
 

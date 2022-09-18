@@ -1,5 +1,6 @@
-from data_structures.interval import Interval
 from typing import List
+
+from data_structures.interval import Interval
 
 
 # Problem 1 - Merge Intervals
