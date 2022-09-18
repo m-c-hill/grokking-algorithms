@@ -488,3 +488,51 @@ Note: You can always assume that there are at least two leaf nodes in the given 
 Find the path with the maximum sum in a given binary tree. Write a function that returns the maximum sum.
 
 A path can be defined as a sequence of nodes between any two nodes and doesn’t necessarily pass through the root. The path must contain at least one node.
+
+---
+
+### [Chapter 9 - Two Heaps](chapters/ch09_two_heaps.py)
+
+**Completed:** 2 / 4
+
+- **Heap** is a tree-based data structure which satifies the **heap property**:
+  - **Min Heap** - Parent node is always smaller than children to the min value can be accessed in O(1) time.
+  - **Max Heap** - Parent node is always larger than children so max value can be accessed in O(1) time.
+- Used in problems where we are given a set of elements such that we can divide them into two parts. To solve the problem, we are interested in knowing the smallest element in one part and the biggest element in the other part.
+- A min heap is used to find the smallest element, while a max heap is used to find the largest.
+- In Python, use the `heapq` library.
+  - The default is a min heap data structure where `heappop(heap)` will return the minimum value.
+  - To use a max heap in `heapq`, simply invert any of the values that are pushed to the heap `(ie. 3 -> -3, -6 -> 6)`.
+
+#### Problem 1 - Find the Median of a Number Stream ✅
+
+Design a class to calculate the median of a number stream. The class should have the following two methods:
+
+1. `insertNum(int num)`: stores the number in the class
+2. `findMedian()`: returns the median of all numbers inserted in the class
+
+If the count of numbers inserted in the class is even, the median will be the average of the middle two numbers.
+
+#### Problem 2 - Sliding Window Median ✅
+
+Given an array of numbers and a number ‘k’, find the median of all the ‘k’ sized sub-arrays (or windows) of the array.
+
+Example: `Input: nums=[1, 2, -1, 3, 5], k = 2 -> Output = [1.5, 0.5, 1.0, 4.0]`
+
+#### Problem 3 - Maximize Capital ❌
+
+Given a set of investment projects with their respective profits, we need to find the most profitable projects. We are given an initial capital and are allowed to invest only in a fixed number of projects. Our goal is to choose projects that give us the maximum profit. Write a function that returns the maximum total capital after selecting the most profitable projects.
+
+We can start an investment project only when we have the required capital. Once a project is selected, we can assume that its profit has become our capital.
+
+Example: `Input: Project Capitals=[0,1,2], Project Profits=[1,2,3], Initial Capital=1, Number of Projects=2 -> Output = 6`
+
+#### Problem Challenge 1: Next Interval ❌
+
+Given an array of intervals, find the next interval of each interval. In a list of intervals, for an interval ‘i’ its next interval ‘j’ will have the smallest ‘start’ greater than or equal to the ‘end’ of ‘i’.
+
+Write a function to return an array containing indices of the next interval of each input interval. If there is no next interval of a given interval, return -1. It is given that none of the intervals have the same start point.
+
+Example: `Input: Intervals [[2,3], [3,4], [5,6]] -> Output = [1, 2, -1]`
+
+---

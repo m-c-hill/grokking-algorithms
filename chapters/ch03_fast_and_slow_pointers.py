@@ -1,4 +1,4 @@
-from ..dataclasses.node import Node
+from ..data_structures.node import Node
 
 
 # Problem 1 - LinkedList Cycle

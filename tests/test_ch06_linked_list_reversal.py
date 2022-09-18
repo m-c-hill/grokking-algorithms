@@ -1,7 +1,7 @@
 import pytest
 from chapters.ch06_linked_list_reversal import *
 
-from dataclasses.interval import Interval
+from data_structures.interval import Interval
 
 
 # =============================

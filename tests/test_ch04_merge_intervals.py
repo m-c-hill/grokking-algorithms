@@ -1,4 +1,4 @@
-from dataclasses.interval import Interval
+from data_structures.interval import Interval
 
 import pytest
 from chapters.ch04_merge_intervals import *

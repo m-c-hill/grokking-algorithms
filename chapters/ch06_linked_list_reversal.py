@@ -1,6 +1,6 @@
 from curses import KEY_LEFT
 import re
-from dataclasses.node import Node
+from data_structures.node import Node
 
 
 # Problem 1 - Reverse a LinkedList

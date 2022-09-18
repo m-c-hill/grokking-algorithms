@@ -1,5 +1,5 @@
 from typing import List
-from dataclasses.tree import TreeNode
+from data_structures.tree import TreeNode
 
 
 # Problem 1 - Binary Tree Path Sum
@@ -108,11 +108,13 @@ def find_path_with_sequence_recursive(
 def count_paths_for_a_sum(root: TreeNode, target_sum: int):
     pass
 
+
 def count_paths_for_a_sum_recursive(root: TreeNode):
     pass
 
 
 # Problem Challenge 1 - Tree Diameter
+
 
 def tree_diameter(node: TreeNode):
     """Calculate the current max diameter of a node"""

@@ -1,4 +1,4 @@
-from dataclasses.interval import Interval
+from data_structures.interval import Interval
 from typing import List
 
 
