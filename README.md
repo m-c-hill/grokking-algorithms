@@ -624,7 +624,7 @@ Output: List containing root nodes of all structurally unique BSTs.
 Explanation: Here are the 2 structurally unique BSTs storing all numbers from 1 to 2:
 ```
 
-# Problem Challenge 3 - Count of Structurally Unique Binary Search Trees ❌
+#### Problem Challenge 3 - Count of Structurally Unique Binary Search Trees ❌
 
 Given a number ‘n’, write a function to return the count of structurally unique Binary Search Trees (BST) that can store values 1 to ‘n’.
 
@@ -632,4 +632,126 @@ Given a number ‘n’, write a function to return the count of structurally uni
 Input: 2
 Output: 2
 Explanation: As we saw in the previous problem, there are 2 unique BSTs storing numbers from 1-2.
+```
+
+---
+
+### [Chapter 11 - Modified Binary Search](chapters/ch11_binary_search.py)
+
+**Completed:** 0 / 10
+
+- Most efficient algorithm to search fro an element in a sorted array / linked list.
+
+#### Problem 1 - Order-agnostic Binary Search ✅
+
+Given a sorted array of numbers, find if a given number ‘key’ is present in the array. Though we know that the array is sorted, we don’t know if it’s sorted in ascending or descending order. You should assume that the array can have duplicates.
+
+Write a function to return the index of the ‘key’ if it is present in the array, otherwise return -1.
+
+```
+Input: [4, 6, 10], key = 10
+Output: 2
+
+Input: [10, 6, 4], key = 10
+Output: 0
+```
+
+#### Problem 2 - Ceiling of a Number ✅
+
+Given an array of numbers sorted in an ascending order, find the ceiling of a given number ‘key’. The ceiling of the ‘key’ will be the smallest element in the given array greater than or equal to the ‘key’.
+
+Write a function to return the index of the ceiling of the ‘key’. If there isn’t any ceiling return -1.
+
+```
+Input: [4, 6, 10], key = 6
+Output: 1
+
+Input: [4, 6, 10], key = -1
+Output: 0
+```
+
+#### Problem 3 - Next Letter ✅
+
+Given an array of lowercase letters sorted in ascending order, find the smallest letter in the given array greater than a given ‘key’.
+
+Assume the given array is a circular list, which means that the last letter is assumed to be connected with the first letter. This also means that the smallest letter in the given array is greater than the last letter of the array and is also the first letter of the array.
+
+Write a function to return the next letter of the given ‘key’.
+
+```
+Input: ['a', 'c', 'f', 'h'], key = 'f'
+Output: 'h'
+```
+
+#### Problem 4 - Number Range ✅
+
+Given an array of numbers sorted in ascending order, find the range of a given number ‘key’. The range of the ‘key’ will be the first and last position of the ‘key’ in the array.
+
+Write a function to return the range of the ‘key’. If the ‘key’ is not present return [-1, -1].
+
+```
+Input: [4, 6, 6, 6, 9], key = 6
+Output: [1, 3]
+```
+
+#### Problem 5 - Search in a Sorted Infinite Array ❌
+
+Given an infinite sorted array (or an array with unknown size), find if a given number ‘key’ is present in the array. Write a function to return the index of the ‘key’ if it is present in the array, otherwise return -1.
+
+Since it is not possible to define an array with infinite (unknown) size, you will be provided with an interface ArrayReader to read elements of the array. ArrayReader.get(index) will return the number at index; if the array’s size is smaller than the index, it will return Integer.MAX_VALUE.
+
+```
+Input: [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30], key = 16
+Output: 6
+```
+
+#### Problem 6 - Minimum Difference Element ❌
+
+Given an array of numbers sorted in ascending order, find the element in the array that has the minimum difference with the given ‘key’.
+
+```
+Input: [4, 6, 10], key = 7
+Output: 6
+```
+
+#### Problem 7 - Bitonic Array Maximum ❌
+
+Find the maximum value in a given Bitonic array. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index `i` in the array `arr[i] != arr[i+1]`.
+
+```
+Input: [1, 3, 8, 12, 4, 2]
+Output: 12
+```
+
+#### Problem Challenge 1 - Search Bitonic Array ❌
+
+Given a Bitonic array, find if a given ‘key’ is present in it. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index `i` in the array `arr[i] != arr[i+1]`.
+
+Write a function to return the index of the ‘key’. If the 'key' appears more than once, return the smaller index. If the ‘key’ is not present, return -1.
+
+```
+Input: [1, 3, 8, 4, 3], key=4
+Output: 3
+```
+
+#### Problem Challenge 2 - Search in Rotated Array ❌
+
+Given an array of numbers which is sorted in ascending order and also rotated by some arbitrary number, find if a given ‘key’ is present in it.
+
+Write a function to return the index of the ‘key’ in the rotated array. If the ‘key’ is not present, return -1. You can assume that the given array does not have any duplicates.
+
+```
+Input: [10, 15, 1, 3, 8], key = 15
+Output: 1
+```
+
+#### Problem Challenge 3 - Rotation Count ❌
+
+Given an array of numbers which is sorted in ascending order and is rotated ‘k’ times around a pivot, find ‘k’.
+
+You can assume that the array does not have any duplicates.
+
+```
+Input: [10, 15, 1, 3, 8]
+Output: 2
 ```
