@@ -137,7 +137,6 @@ def test_search_rotated_array(arr, key, expected):
 
 
 # Problem Challenge 3: Rotation Count
-@pytest.mark.skip(reason="TODO")
 @pytest.mark.parametrize(
     "arr,expected",
     [

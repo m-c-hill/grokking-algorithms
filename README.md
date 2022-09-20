@@ -638,7 +638,7 @@ Explanation: As we saw in the previous problem, there are 2 unique BSTs storing 
 
 ### [Chapter 11 - Modified Binary Search](chapters/ch11_binary_search.py)
 
-**Completed:** 0 / 10
+**Completed:** 9 / 10
 
 - Most efficient algorithm to search fro an element in a sorted array / linked list.
 
@@ -705,7 +705,7 @@ Input: [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30], key = 16
 Output: 6
 ```
 
-#### Problem 6 - Minimum Difference Element ❌
+#### Problem 6 - Minimum Difference Element ✅
 
 Given an array of numbers sorted in ascending order, find the element in the array that has the minimum difference with the given ‘key’.
 
@@ -714,7 +714,7 @@ Input: [4, 6, 10], key = 7
 Output: 6
 ```
 
-#### Problem 7 - Bitonic Array Maximum ❌
+#### Problem 7 - Bitonic Array Maximum ✅
 
 Find the maximum value in a given Bitonic array. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index `i` in the array `arr[i] != arr[i+1]`.
 
@@ -723,7 +723,7 @@ Input: [1, 3, 8, 12, 4, 2]
 Output: 12
 ```
 
-#### Problem Challenge 1 - Search Bitonic Array ❌
+#### Problem Challenge 1 - Search Bitonic Array ✅
 
 Given a Bitonic array, find if a given ‘key’ is present in it. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index `i` in the array `arr[i] != arr[i+1]`.
 
@@ -734,7 +734,7 @@ Input: [1, 3, 8, 4, 3], key=4
 Output: 3
 ```
 
-#### Problem Challenge 2 - Search in Rotated Array ❌
+#### Problem Challenge 2 - Search in Rotated Array ✅
 
 Given an array of numbers which is sorted in ascending order and also rotated by some arbitrary number, find if a given ‘key’ is present in it.
 
@@ -745,7 +745,7 @@ Input: [10, 15, 1, 3, 8], key = 15
 Output: 1
 ```
 
-#### Problem Challenge 3 - Rotation Count ❌
+#### Problem Challenge 3 - Rotation Count ✅
 
 Given an array of numbers which is sorted in ascending order and is rotated ‘k’ times around a pivot, find ‘k’.
 
