@@ -1,5 +1,6 @@
-from typing import List
 import math
+from typing import List
+
 
 # Problem 1 - Order-agnostic Binary Search
 def binary_search(arr: List[int], key: int) -> int:
@@ -205,7 +206,7 @@ def search_rotated_array(arr: List[int], key: int) -> int:
 
     while start <= end:
         middle = (start + end) // 2
-        
+
         if key == arr[middle]:
             return middle
 
@@ -220,7 +221,6 @@ def search_rotated_array(arr: List[int], key: int) -> int:
             else:
                 # Key is in the second half of the array (unsorted)
                 start = middle + 1
-
 
         # Sorted side on RHS
         elif arr[start] > arr[middle]:
@@ -245,7 +245,7 @@ def rotation_count(arr: List[int]) -> int:
         # Need to return the index of the max value in the array
         if middle < end and arr[middle] > arr[middle + 1]:
             # If middle number is larger than the next number
-            return middle + 1 # Add one to convert 0 based index to num of rotations
+            return middle + 1  # Add one to convert 0 based index to num of rotations
         elif middle > start and arr[middle] < arr[middle - 1]:
             # If the previous number was larger than the middle number
             return middle

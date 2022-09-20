@@ -640,7 +640,7 @@ Explanation: As we saw in the previous problem, there are 2 unique BSTs storing 
 
 **Completed:** 9 / 10
 
-- Most efficient algorithm to search fro an element in a sorted array / linked list.
+- Most efficient algorithm to search for an element in a sorted array / linked list.
 
 #### Problem 1 - Order-agnostic Binary Search ✅
 
@@ -754,4 +754,157 @@ You can assume that the array does not have any duplicates.
 ```
 Input: [10, 15, 1, 3, 8]
 Output: 2
+```
+
+---
+
+### [Chapter 13 - Top 'K' Elements](chapters/ch13_top_k_elements.py)
+
+**Completed:** 0 / 14
+
+- Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.
+- Use a heap to keep track of 'k' elements.
+- **Heap** is a tree-based data structure which satifies the **heap property**:
+  - **Min Heap** - Parent node is always smaller than children to the min value can be accessed in O(1) time.
+  - **Max Heap** - Parent node is always larger than children so max value can be accessed in O(1) time.
+
+#### Problem 1 - Top 'K' Numbers ✅
+
+Given an unsorted array of numbers, find the ‘K’ largest numbers in it.
+
+```bash
+Input: [3, 1, 5, 12, 2, 11], K = 3
+Output: [5, 12, 11]
+```
+
+#### Problem 2 - Kth Smallest Number ✅
+
+Given an unsorted array of numbers, find Kth smallest number in it.
+
+```bash
+Input: [1, 5, 12, 2, 11, 5], K = 3
+Output: 5
+```
+
+#### Problem 3 - 'K' Closest Points to the Origin ✅
+
+Given an array of points in a 2D2D plane, find ‘K’ closest points to the origin.
+
+```bash
+Input: points = [[1,2],[1,3]], K = 1
+Output: [[1,2]]
+```
+
+#### Problem 4 - Connect Ropes ✅
+
+Given ‘N’ ropes with different lengths, we need to connect these ropes into one big rope with minimum cost. The cost of connecting two ropes is equal to the sum of their lengths.
+
+```bash
+Input: [1, 3, 11, 5]
+Output: 33
+```
+
+#### Problem 5 - Top 'K' Frequent Numbers
+
+Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.
+
+```bash
+Input: [1, 3, 5, 12, 11, 12, 11], K = 2
+Output: [12, 11]
+```
+
+#### Problem 6 - Frequency Sort
+
+Given a string, sort it based on the decreasing frequency of its characters.
+
+'''bash
+Input: "Programming"
+Output: "rrggmmPiano"
+'''
+
+#### Problem 7 - Kth Largest Number in a Stream
+
+Design a class to efficiently find the Kth largest element in a stream of numbers.
+
+The class should have the following two things:
+
+The constructor of the class should accept an integer array containing initial numbers from the stream and an integer ‘K’.
+The class should expose a function add(int num) which will store the given number and return the Kth largest number.
+
+```bash
+Input: [3, 1, 5, 12, 2, 11], K = 4
+1. Calling add(6) should return '5'.
+2. Calling add(13) should return '6'.
+3. Calling add(4) should still return '6'.
+```
+
+#### Problem 8 - 'K' Closest Numbers
+
+Given a sorted number array and two integers ‘K’ and ‘X’, find ‘K’ closest numbers to ‘X’ in the array. Return the numbers in the sorted order. ‘X’ is not necessarily present in the array.
+
+```bash
+Input: [5, 6, 7, 8, 9], K = 3, X = 7
+Output: [6, 7, 8]
+```
+
+#### Problem 9 - Maximum Distinct Elements
+
+Given an array of numbers and a number ‘K’, we need to remove ‘K’ numbers from the array such that we are left with maximum distinct numbers.
+
+```bash
+Input: [7, 3, 5, 8, 5, 3, 3], and K=2
+Output: 3
+```
+
+#### Problem 10 - Sum of Elements
+
+Given an array, find the sum of all numbers between the K1’th and K2’th smallest elements of that array.
+
+```bash
+Input: [1, 3, 12, 5, 15, 11], and K1=3, K2=6
+Output: 23
+```
+
+#### Problem 11 - Rearrange String
+
+Given a string, find if its letters can be rearranged in such a way that no two same characters come next to each other.
+
+```bash
+Input: "aappp"
+Output: "papap"
+```
+
+#### Problem Challenge 1: Rearrange String K Distance Apart
+
+Given a string and a number ‘K’, find if the string can be rearranged such that the same characters are at least ‘K’ distance apart from each other.
+
+```bash
+Input: "mmpp", K=2
+Output: "mpmp" or "pmpm"
+```
+
+#### Problem Challenge 2: Scheduling Tasks
+
+You are given a list of tasks that need to be run, in any order, on a server. Each task will take one CPU interval to execute but once a task has finished, it has a cooling period during which it can’t be run again. If the cooling period for all tasks is ‘K’ intervals, find the minimum number of CPU intervals that the server needs to finish all tasks.
+
+If at any time the server can’t execute any task then it must stay idle.
+
+```bash
+Input: [a, a, a, b, c, c], K=2
+Output: 7
+```
+
+#### Problem Challenge 3: Frequency Stack
+
+Design a class that simulates a Stack data structure, implementing the following two operations:
+
+1. `push(int num)`: Pushes the number ‘num’ on the stack.
+2. `pop()`: Returns the most frequent number in the stack. If there is a tie, return the number which was pushed later.
+
+```bash
+After following push operations: push(1), push(2), push(3), push(2), push(1), push(2), push(5)
+
+1. pop() should return 2, as it is the most frequent number
+2. Next pop() should return 1
+3. Next pop() should return 2
 ```
