@@ -119,10 +119,7 @@ def test_smallest_window_containing_substring(string, pattern, expected):
 # Problem Challenge 4 - Words Concatenation
 @pytest.mark.parametrize(
     "string,words,expected",
-    [
-        ("catfoxcat", ["cat", "fox"], [0, 3]),
-        ("catcatfoxfox", ["cat", "fox"], [3]),
-    ],
+    [("catfoxcat", ["cat", "fox"], [0, 3]), ("catcatfoxfox", ["cat", "fox"], [3])],
 )
 def test_words_concatenation(string, words, expected):
     res = words_concatenation(string, words)

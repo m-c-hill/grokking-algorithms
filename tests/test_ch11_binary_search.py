@@ -125,11 +125,7 @@ def test_search_bitonic_array(arr, key, expected):
 
 # Problem Challege 2: Search in Rotated Array
 @pytest.mark.parametrize(
-    "arr,key,expected",
-    [
-        ([10, 15, 1, 3, 8], 15, 1),
-        ([4, 5, 7, 9, 10, -1, 2], 10, 4),
-    ],
+    "arr,key,expected", [([10, 15, 1, 3, 8], 15, 1), ([4, 5, 7, 9, 10, -1, 2], 10, 4)]
 )
 def test_search_rotated_array(arr, key, expected):
     result = search_rotated_array(arr, key)
@@ -139,11 +135,7 @@ def test_search_rotated_array(arr, key, expected):
 # Problem Challenge 3: Rotation Count
 @pytest.mark.parametrize(
     "arr,expected",
-    [
-        ([10, 15, 1, 3, 8], 2),
-        ([4, 5, 7, 9, 10, -1, 2], 5),
-        ([1, 3, 8, 10], 0),
-    ],
+    [([10, 15, 1, 3, 8], 2), ([4, 5, 7, 9, 10, -1, 2], 5), ([1, 3, 8, 10], 0)],
 )
 def test_rotation_count(arr, expected):
     result = rotation_count(arr)

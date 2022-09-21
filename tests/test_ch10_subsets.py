@@ -74,10 +74,7 @@ def test_case_permutations(str1, expected):
 # Problem 5 - Balanced Parenthesis
 @pytest.mark.parametrize(
     "N,expected",
-    [
-        (2, ["(())", "()()"]),
-        (3, ["((()))", "(()())", "(())()", "()(())", "()()()"]),
-    ],
+    [(2, ["(())", "()()"]), (3, ["((()))", "(()())", "(())()", "()(())", "()()()"])],
 )
 def test_balanced_parenthesis(N, expected):
     res = balanced_parenthesis(N)

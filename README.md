@@ -760,7 +760,7 @@ Output: 2
 
 ### [Chapter 13 - Top 'K' Elements](chapters/ch13_top_k_elements.py)
 
-**Completed:** 0 / 14
+**Completed:** 6 / 14
 
 - Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.
 - Use a heap to keep track of 'k' elements.
@@ -804,7 +804,7 @@ Input: [1, 3, 11, 5]
 Output: 33
 ```
 
-#### Problem 5 - Top 'K' Frequent Numbers
+#### Problem 5 - Top 'K' Frequent Numbers ✅
 
 Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.
 
@@ -813,23 +813,23 @@ Input: [1, 3, 5, 12, 11, 12, 11], K = 2
 Output: [12, 11]
 ```
 
-#### Problem 6 - Frequency Sort
+#### Problem 6 - Frequency Sort ✅
 
 Given a string, sort it based on the decreasing frequency of its characters.
 
-'''bash
+```bash
 Input: "Programming"
 Output: "rrggmmPiano"
-'''
+```
 
-#### Problem 7 - Kth Largest Number in a Stream
+#### Problem 7 - Kth Largest Number in a Stream ❌
 
 Design a class to efficiently find the Kth largest element in a stream of numbers.
 
 The class should have the following two things:
 
-The constructor of the class should accept an integer array containing initial numbers from the stream and an integer ‘K’.
-The class should expose a function add(int num) which will store the given number and return the Kth largest number.
+- The constructor of the class should accept an integer array containing initial numbers from the stream and an integer ‘K’.
+- The class should expose a function add(int num) which will store the given number and return the Kth largest number.
 
 ```bash
 Input: [3, 1, 5, 12, 2, 11], K = 4
@@ -838,7 +838,7 @@ Input: [3, 1, 5, 12, 2, 11], K = 4
 3. Calling add(4) should still return '6'.
 ```
 
-#### Problem 8 - 'K' Closest Numbers
+#### Problem 8 - 'K' Closest Numbers ✅
 
 Given a sorted number array and two integers ‘K’ and ‘X’, find ‘K’ closest numbers to ‘X’ in the array. Return the numbers in the sorted order. ‘X’ is not necessarily present in the array.
 
@@ -847,7 +847,7 @@ Input: [5, 6, 7, 8, 9], K = 3, X = 7
 Output: [6, 7, 8]
 ```
 
-#### Problem 9 - Maximum Distinct Elements
+#### Problem 9 - Maximum Distinct Elements ❌
 
 Given an array of numbers and a number ‘K’, we need to remove ‘K’ numbers from the array such that we are left with maximum distinct numbers.
 
@@ -856,7 +856,7 @@ Input: [7, 3, 5, 8, 5, 3, 3], and K=2
 Output: 3
 ```
 
-#### Problem 10 - Sum of Elements
+#### Problem 10 - Sum of Elements ✅
 
 Given an array, find the sum of all numbers between the K1’th and K2’th smallest elements of that array.
 
@@ -865,7 +865,7 @@ Input: [1, 3, 12, 5, 15, 11], and K1=3, K2=6
 Output: 23
 ```
 
-#### Problem 11 - Rearrange String
+#### Problem 11 - Rearrange String ❌
 
 Given a string, find if its letters can be rearranged in such a way that no two same characters come next to each other.
 
@@ -874,7 +874,7 @@ Input: "aappp"
 Output: "papap"
 ```
 
-#### Problem Challenge 1: Rearrange String K Distance Apart
+#### Problem Challenge 1: Rearrange String K Distance Apart ❌
 
 Given a string and a number ‘K’, find if the string can be rearranged such that the same characters are at least ‘K’ distance apart from each other.
 
@@ -883,7 +883,7 @@ Input: "mmpp", K=2
 Output: "mpmp" or "pmpm"
 ```
 
-#### Problem Challenge 2: Scheduling Tasks
+#### Problem Challenge 2: Scheduling Tasks ❌
 
 You are given a list of tasks that need to be run, in any order, on a server. Each task will take one CPU interval to execute but once a task has finished, it has a cooling period during which it can’t be run again. If the cooling period for all tasks is ‘K’ intervals, find the minimum number of CPU intervals that the server needs to finish all tasks.
 
@@ -894,7 +894,7 @@ Input: [a, a, a, b, c, c], K=2
 Output: 7
 ```
 
-#### Problem Challenge 3: Frequency Stack
+#### Problem Challenge 3: Frequency Stack ❌
 
 Design a class that simulates a Stack data structure, implementing the following two operations:
 
