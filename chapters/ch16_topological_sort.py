@@ -131,7 +131,7 @@ def alien_dictionary(words: List[str]) -> str:
     # populate the graph and in-degree hash maps
     for i in range(len(words) - 1):
         # Compare characters from two words
-        w1, w2 = words[i], words[i+1]
+        w1, w2 = words[i], words[i + 1]
 
         for j in range(min(len(w1), len(w2))):
             u, v = w1[j], w2[j]

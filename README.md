@@ -758,6 +758,112 @@ Output: 2
 
 ---
 
+### [Chapter 12 - Bitwise XOR](chapters/ch12_bitwise_xor.py)
+
+**Completed:** 4 / 4
+
+- A bitwise XOR is a **binary operation** that takes two bit patterns of equal length and perform the logical exclusive OR operation on each corresponding pair.
+- XOR: if either bits A or B are 1 (but not both), return 1. Else return 0.
+
+```bash
+| A | B | A XOR B |
+-------------------
+| 0 | 0 |    0    |
+| 1 | 0 |    1    |
+| 0 | 1 |    1    |
+| 1 | 1 |    0    |
+```
+
+Simple rules:
+
+- XOR of a number with itself is always 0:
+
+```
+1 ^ 1 = 0
+29 ^ 29 = 0
+```
+
+- The XOR of a number with 0 returns the same number:
+
+```
+1 ^ 0 = 1
+31 ^ 0 = 31
+```
+
+- XOR is associative and commutative:
+
+```
+(a ^ b) ^ c = a ^ (b ^ c)
+a ^ b = b ^ a
+```
+
+Example:
+
+```bash
+3 ^ 4
+
+|  3  |  0  1  1
+|  4  |  1  0  0
+| 3^4 |  1  1  1
+
+3 ^ 4 = b111 = 7
+```
+
+#### Problem 1 - Single Number ✅
+
+In a non-empty array of integers, every number appears twice except for one, find that single number.
+
+```bash
+Input: 1, 4, 2, 1, 3, 2, 3
+Output: 4
+```
+
+#### Problem 2 - Two Single Numbers ✅
+
+In a non-empty array of numbers, every number appears exactly twice except two numbers that appear only once. Find the two numbers that appear only once.
+
+```bash
+Input: [1, 4, 2, 1, 3, 5, 6, 2, 3, 5]
+Output: [4, 6]
+```
+
+#### Problem 3 - Complement of Base 10 Number ✅
+
+Every non-negative integer N has a binary representation, for example, 8 can be represented as “1000” in binary and 7 as “0111” in binary.
+
+The complement of a binary representation is the number in binary that we get when we change every 1 to a 0 and every 0 to a 1. For example, the binary complement of “1010” is “0101”.
+
+For a given positive number N in base-10, return the complement of its binary representation as a base-10 integer.
+
+```bash
+Input: 8
+Output: 7
+Explanation: 8 is 1000 in binary, its complement is 0111 in binary, which is 7 in base-10.
+```
+
+#### Problem Challenge 1 - Flip and Invert an Image ✅
+
+Given a binary matrix representing an image, we want to flip the image horizontally, then invert it.
+
+To flip an image horizontally means that each row of the image is reversed. For example, flipping [0, 1, 1] horizontally results in [1, 1, 0].
+
+To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0. For example, inverting [1, 1, 0] results in [0, 0, 1].
+
+```bash
+Input: [
+  [1,0,1],
+  [1,1,1],
+  [0,1,1]
+]
+Output: [
+  [0,1,0],
+  [0,0,0],
+  [0,0,1]
+]
+```
+
+---
+
 ### [Chapter 13 - Top 'K' Elements](chapters/ch13_top_k_elements.py)
 
 **Completed:** 9 / 14
@@ -976,7 +1082,7 @@ Output: [9, 3], [9, 6], [8, 6]
 
 ### [Chapter 16 - Topological Sort](chapters/ch16_topological_sort.py)
 
-**Completed:** 0 / 7
+**Completed:** 4 / 7
 
 - Topological Sort is used to find a linear ordering of elements that have dependencies on each other.
 - For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.
