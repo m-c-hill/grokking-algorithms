@@ -913,7 +913,7 @@ After following push operations: push(1), push(2), push(3), push(2), push(1), pu
 
 ### [Chapter 14 - K Way Merge](chapters/ch14_k_way_merge.py)
 
-**Completed:** 0 / 5
+**Completed:** 5 / 5
 
 - Pattern is used to solve problems when presented with a **list of sorted arrays**.
 - Whenever we are given ‘K’ sorted arrays, we can use a Heap to efficiently perform a sorted traversal of all the elements of all arrays.
@@ -970,4 +970,113 @@ Given two sorted arrays in descending order, find ‘K’ pairs with the largest
 ```bash
 Input: L1=[9, 8, 2], L2=[6, 3, 1], K=3
 Output: [9, 3], [9, 6], [8, 6]
+```
+
+---
+
+### [Chapter 16 - Topological Sort](chapters/ch16_topological_sort.py)
+
+**Completed:** 0 / 7
+
+- Topological Sort is used to find a linear ordering of elements that have dependencies on each other.
+- For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.
+- Topological Sort of a directed graph (a graph with unidirectional edges) is a linear ordering of its vertices such that for every directed edge (`U`, `V`) from vertex `U` to vertex `V`, `U` comes before `V` in the ordering.
+
+The basic idea behind the topological sort is to provide a partial ordering among the vertices of the graph such that if there is an edge from `U` to `V` then `U ≤ V`
+
+**Source:** Any node that has no incoming edge and has only outgoing edges is called a source.
+**Sink:** Any node that has only incoming edges and no outgoing edge is called a sink.
+
+- We can say that a **topological ordering** starts with one of the **sources** and ends at one of the **sinks**.
+- A topological ordering is possible only when the graph has no **directed cycles**, _i.e. if the graph is a Directed Acyclic Graph (DAG)._
+- If the graph has a cycle, some vertices will have cyclic dependencies which makes it impossible to find a linear ordering among vertices.
+
+Method
+
+- To find the topological sort of a graph we can traverse the graph in a Breadth First Search (BFS) way.
+  - Save all sources to a sorted list.
+  - Remove all sources and their edges from the graph.
+  - Once removed, we will have new sources, so repeat the above steps until all vertices are visited.
+
+Algorithm
+
+- Store graph in a hash map, where each parent node will correspond to a list of all its children.
+- Use another hash map to store the number of in-degrees. Any vertex with 0 will be a source.
+- Store any vertices with 0 in-degrees in a queue.
+- For each source:
+  - Add it to a sorted list.
+  - Get all of its children from the graph.
+  - Decrement the in-degree of each child by 1.
+  - If a child's in-degree becomes 0, add it to the sources queue.
+  - Repeat until queue is empty.
+
+#### Problem 1 - Topological Sort ✅
+
+Given a directed graph, find the topological ordering of its vertices.
+
+```bash
+Input: Vertices=4, Edges=[3, 2], [3, 0], [2, 0], [2, 1]
+Output: Following are the two valid topological sorts for the given graph:
+1) 3, 2, 0, 1
+2) 3, 2, 1, 0
+```
+
+#### Problem 2 - Tasks Scheduling ✅
+
+There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need to be completed before it can be scheduled. Given the number of tasks and a list of prerequisite pairs, find out if it is possible to schedule all the tasks.
+
+```bash
+Input: Tasks=3, Prerequisites=[0, 1], [1, 2]
+Output: true
+Explanation: To execute task '1', task '0' needs to finish first. Similarly, task '1' needs
+to finish before '2' can be scheduled. One possible scheduling of tasks is: [0, 1, 2]
+```
+
+#### Problem 3 - Tasks Scheduling Order ✅
+
+There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need to be completed before it can be scheduled. Given the number of tasks and a list of prerequisite pairs, write a method to find the ordering of tasks we should pick to finish all tasks.
+
+```bash
+Input: Tasks=3, Prerequisites=[0, 1], [1, 2]
+Output: [0, 1, 2]
+Explanation: To execute task '1', task '0' needs to finish first. Similarly, task '1' needs
+to finish before '2' can be scheduled. A possible scheduling of tasks is: [0, 1, 2]
+```
+
+#### Problem 4 - All Tasks Scheduling Orders ❌
+
+There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need to be completed before it can be scheduled. Given the number of tasks and a list of prerequisite pairs, write a method to print all possible ordering of tasks meeting all prerequisites.
+
+```bash
+Input: Tasks=3, Prerequisites=[0, 1], [1, 2]
+Output: [0, 1, 2]
+```
+
+#### Problem 5 - Alien Dictionary ✅
+
+There is a dictionary containing words from an alien language for which we don’t know the ordering of the letters. Write a method to find the correct order of the letters in the alien language. It is given that the input is a valid dictionary and there exists an ordering among its letters.
+
+```bash
+Input: Words: ["ba", "bc", "ac", "cab"]
+Output: bac
+```
+
+#### Problem Challenge 1 - Reconstructing a Sequence ❌
+
+Given a sequence originalSeq and an array of sequences, write a method to find if originalSeq can be uniquely reconstructed from the array of sequences.
+
+Unique reconstruction means that we need to find if originalSeq is the only sequence such that all sequences in the array are subsequences of it.
+
+```bash
+Input: originalSeq: [1, 2, 3, 4], seqs: [[1, 2], [2, 3], [3, 4]]
+Output: true
+```
+
+#### Problem Challenge 2 - Minimum Height Trees ❌
+
+We are given an undirected graph that has characteristics of a k-ary tree. In such a graph, we can choose any node as the root to make a k-ary tree. The root (or the tree) with the minimum height will be called Minimum Height Tree (MHT). There can be multiple MHTs for a graph. In this problem, we need to find all those roots which give us MHTs. Write a method to find all MHTs of the given graph and return a list of their roots.
+
+```bash
+Input: vertices: 5, Edges: [[0, 1], [1, 2], [1, 3], [2, 4]]
+Output:[1, 2]
 ```

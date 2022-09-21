@@ -1,7 +1,9 @@
-from heapq import *
 import math
+from heapq import *
 from typing import List
+
 from data_structures.node import ListNode
+
 
 # Problem 1 - Merge K Sorted Lists
 def merge_k_sorted_list(lists: ListNode) -> ListNode:
@@ -15,7 +17,7 @@ def merge_k_sorted_list(lists: ListNode) -> ListNode:
     result_head = None
     while min_heap:
         smallest_node = heappop(min_heap)
-        
+
         if result_head is None:
             result_tail = smallest_node
             result_head = result_tail
@@ -54,7 +56,7 @@ def kth_smallest_number_in_m_sorted_lists(lists: List[List[int]], k: int) -> int
 
 # Problem 3 - Kth Smallest Number in a Sorted Matrix
 def kth_smallest_number_in_sorted_matrix(matrix: List[List[int]], k: int) -> int:
-    min_heap = []   
+    min_heap = []
 
     # Don't need to  push anymore than k elements into the heap since matrix
     #   has sorted rows and sorted columns.
@@ -92,11 +94,11 @@ def smallest_number_range(lists: List[List[int]]) -> List[int]:
         num, l = heappop(min_heap)
         current_range = range_end - range_start
         new_range = max_num_in_heap - num
-    
+
         if new_range < current_range:
             range_start = num
             range_end = max_num_in_heap
-        
+
         if len(l) > 1:
             heappush(l[1], l[1:])
             max_num_in_heap = max(max_num_in_heap, l[1])
@@ -105,7 +107,9 @@ def smallest_number_range(lists: List[List[int]]) -> List[int]:
 
 
 # Problem Challenge 1 - K Pairs with Largest Sums
-def find_pairs_with_largest_sums(arr1: List[int], arr2: List[int], k: int) -> List[List[int]]:
+def find_pairs_with_largest_sums(
+    arr1: List[int], arr2: List[int], k: int
+) -> List[List[int]]:
     min_heap = []
 
     for i in range(len(arr1)):
@@ -131,6 +135,5 @@ def find_pairs_with_largest_sums(arr1: List[int], arr2: List[int], k: int) -> Li
     results = []
     for (sum, num1, num2) in min_heap:
         results.append([num1, num2])
-    
+
     return results
-            
