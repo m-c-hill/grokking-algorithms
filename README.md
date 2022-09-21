@@ -760,7 +760,7 @@ Output: 2
 
 ### [Chapter 13 - Top 'K' Elements](chapters/ch13_top_k_elements.py)
 
-**Completed:** 6 / 14
+**Completed:** 9 / 14
 
 - Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.
 - Use a heap to keep track of 'k' elements.
@@ -847,7 +847,7 @@ Input: [5, 6, 7, 8, 9], K = 3, X = 7
 Output: [6, 7, 8]
 ```
 
-#### Problem 9 - Maximum Distinct Elements ❌
+#### Problem 9 - Maximum Distinct Elements ✅
 
 Given an array of numbers and a number ‘K’, we need to remove ‘K’ numbers from the array such that we are left with maximum distinct numbers.
 
@@ -907,4 +907,67 @@ After following push operations: push(1), push(2), push(3), push(2), push(1), pu
 1. pop() should return 2, as it is the most frequent number
 2. Next pop() should return 1
 3. Next pop() should return 2
+```
+
+---
+
+### [Chapter 14 - K Way Merge](chapters/ch14_k_way_merge.py)
+
+**Completed:** 0 / 5
+
+- Pattern is used to solve problems when presented with a **list of sorted arrays**.
+- Whenever we are given ‘K’ sorted arrays, we can use a Heap to efficiently perform a sorted traversal of all the elements of all arrays.
+  - The smallest element of each sorted array can be pushed to a min heap to get the overall minimum.
+  - While inserting elements to the min heap, keep track of which array the element came from.
+  - Then, remove the top element from the heap to get the smallest element and push the next element from the same array, to which this smallest element belonged, to the heap.
+  - This can be repeated to make a sorted traversal of all elements.
+
+#### Problem 1 - Merge K Sorted Lists ✅
+
+Given an array of ‘K’ sorted LinkedLists, merge them into one sorted list.
+
+```bash
+Input: L1=[2, 6, 8], L2=[3, 6, 7], L3=[1, 3, 4]
+Output: [1, 2, 3, 3, 4, 6, 6, 7, 8]
+```
+
+#### Problem 2 - Kth Smallest Number in M Sorted Lists ✅
+
+Given ‘M’ sorted arrays, find the K’th smallest number among all the arrays.
+
+```bash
+Input: L1=[2, 6, 8], L2=[3, 6, 7], L3=[1, 3, 4], K=5
+Output: 4
+```
+
+#### Problem 3 - Kth Smallest Number in a Sorted Matrix ✅
+
+Given an `N × N` matrix where each row and column is sorted in ascending order, find the Kth smallest element in the matrix.
+
+```bash
+Input: Matrix=[
+    [2, 6, 8],
+    [3, 7, 10],
+    [5, 8, 11]
+  ],
+  K=5
+Output: 7
+```
+
+#### Problem 4 - Smallest Number Range ✅
+
+Given ‘M’ sorted arrays, find the smallest range that includes at least one number from each of the ‘M’ lists.
+
+```bash
+Input: L1=[1, 5, 8], L2=[4, 12], L3=[7, 8, 10]
+Output: [4, 7]
+```
+
+#### Problem Challenge 1 - K Pairs with Largest Sums ✅
+
+Given two sorted arrays in descending order, find ‘K’ pairs with the largest sum where each pair consists of numbers from both the arrays.
+
+```bash
+Input: L1=[9, 8, 2], L2=[6, 3, 1], K=3
+Output: [9, 3], [9, 6], [8, 6]
 ```

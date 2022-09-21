@@ -134,7 +134,9 @@ def find_closest_elements(arr: List[int], k: int, x: int):
     low, high = index - k, index + k
 
     low = max(low, 0)  # low cannot be less than zero
-    high = min(high, len(arr) - 1)  # high cannot be greater than the length of the array
+    high = min(
+        high, len(arr) - 1
+    )  # high cannot be greater than the length of the array
 
     min_heap = []
 
@@ -145,7 +147,7 @@ def find_closest_elements(arr: List[int], k: int, x: int):
     results = []
     for _ in range(k):
         results.append(heappop(min_heap)[1])
-    
+
     results.sort()
     return results
 
@@ -210,9 +212,6 @@ def max_distinct_elements(arr: List[int], k: int):
     return distinct_count
 
 
-    
-
-
 # Problem 10 - Sum of Elements
 def sum_of_elements(arr: List[int], k1: int, k2: int) -> int:
     min_heap = []
@@ -228,7 +227,7 @@ def sum_of_elements(arr: List[int], k1: int, k2: int) -> int:
         result += heappop(min_heap)
 
     return result
-    
+
 
 # Problem 11 - Rearrange String
 def rearrange_string():

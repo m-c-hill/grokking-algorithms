@@ -20,3 +20,13 @@ class Node:
             return True
 
         return self.value == other.value and self.next == other.next
+
+
+class ListNode:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    # used for the min-heap
+    def __lt__(self, other):
+        return self.value < other.value
