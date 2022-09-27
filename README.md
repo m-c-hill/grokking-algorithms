@@ -1187,11 +1187,39 @@ Output:[1, 2]
 
 ---
 
+##[Chapter 18 - Islands (Matrix Traversal)](chapters/ch18_islands.py)
+
+**Completed:** 6 / 7
+
+- Concurrency & thread safety can be easily added to many algorithms.
+- Code is **thread safe** if it behaves correctly when accessed from multiple threads, regardless of the scheduling or interleaving of the execution of those threads by the runtime environment, and with no additional synchronization or other coordination on the part of the calling code.
+- Algorithms can be made multi-threaded to perform multiple concurrent tasks or to perform pre-fetching or post-processing functions to speed things up.
+
+### Problem 1 - Same Tree
+
+Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.
+
+Two binary trees are considered the same if they met following two conditions:
+
+- Both tree are structurally identical.
+- Each corresponding node on both the trees have the same value.
+
+### Problem 2 - Invert Binary Tree
+
+Given the root of a binary tree, invert it (swapping left and right children for each node).
+
+### Problem 3 - Binary Tree Search Iterator
+
+Implement an iterator for the in-order traversal of a binary search tree (BST). That is, given a BST, we need to implement two functions:
+
+- `hasNext()`: Returns true if at least one element is left in the in-order traversal of the BST.
+- `int next()`: Return the next element in the in-order traversal of the BST.
+
 ---
 
 ##[Chapter 18 - Islands (Matrix Traversal)](chapters/ch18_islands.py)
 
-**Completed:** 0 / 7
+**Completed:** 6 / 7
 
 - The Island pattern describes all the efficient ways to traverse a matrix.
 

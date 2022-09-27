@@ -9,6 +9,14 @@ class MedianOfStream:
         self.max_heap = []  # To store the first half of the numbers
         self.min_heap = []  # To store the second half of the numbers
 
+    def __repr__(self) -> str:
+        nums = []
+        for num in self.max_heap:
+            nums.append(-num)
+        for num in self.min_heap:
+            nums.append(num)
+        return str(sorted(nums))
+
     # heapq default is a min heap. For the max heap, invert values when inserting.
     def insert_num(self, num: int):
         # Insert number
@@ -21,16 +29,15 @@ class MedianOfStream:
         max_heap_size = len(self.max_heap)
         min_heap_size = len(self.min_heap)
 
-        if min_heap_size >= max_heap_size:
-            # Push the inverted value of the max of the min heap to the max heap
-            heappush(self.max_heap, -heappop(self.min_heap))
-        elif max_heap_size > max_heap_size + 1:
-            # Push the inverted value of the min of the max heap to the min heap
+        if max_heap_size > min_heap_size + 1:
             heappush(self.min_heap, -heappop(self.max_heap))
+
+        elif min_heap_size > max_heap_size:
+            heappush(self.max_heap, -heappop(self.min_heap))
 
     def find_median(self):
         if len(self.max_heap) == len(self.min_heap):
-            return (self.min_heap[0] + -self.max_heap) / 2.0
+            return (self.min_heap[0] + -self.max_heap[0]) / 2.0
 
         return -self.max_heap[0]
 
@@ -105,3 +112,10 @@ class SlidingWindowMedian:
 
 
 # Problem Challenge 1: Next Interval
+
+
+med = MedianOfStream()
+med.insert_num(1)
+med.insert_num(2)
+breakpoint()
+med.find_median()
