@@ -4,15 +4,16 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class Codec:
 
     # preorder traversal: traverse left nodes first
-    
+
     def serialize(self, root):
         res = []
         self.serialize_recursive(root, res)
         return ",".join(res)
-        
+
     def serialize_recursive(self, root, res):
         if root is None:
             res.append("N")
@@ -24,20 +25,20 @@ class Codec:
     def deserialize(self, data):
         vals = data.split(",")
         self.index = 0
-        
+
         return self.deserialize_rescursive(data)
-        
-        
+
     def deserialize_rescursive(self, data):
         if data[self.index] == "N":
             self.index += 1
             return None
-        node = TreeNode(int(data[self.index]))  
+        node = TreeNode(int(data[self.index]))
         self.index += 1
         node.left = self.deserialize_rescursive(data)
         node.right = self.deserialize_rescursive(data)
-        
+
         return node
+
 
 codec = Codec()
 
