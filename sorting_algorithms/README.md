@@ -26,16 +26,32 @@ Sorting useful for a number of applications:
 - With every new pass through the list, the largest element in the list “bubbles up” toward its correct position.
 - Bubble sort consists of making multiple passes through a list, comparing elements one by one, and swapping adjacent items that are out of order.
 - Compare elements at i and i+1, and swap if num[i] > num[i+1]
-- Complexity of O(n^2)
+- Complexity of `O(n^2)`
 
 ### Insertion Sort
-- Work left to right - examine each item and compare it to items on its left. Insert the item in the correct position in the array.
-- The array will form sorted and unsorted partitions.
+- Iteratively work through each item in the list. The insertion sort partitions the array into a sorted and unsorted section as it works through each item, with the sorted section on the left and unsorted on the right.
+- Examine each item and compare it to the items on its left (the unsorted section). Insert the item in the correct position in the array by continuing to swap the item with its neigbours until it is no longer smaller than its left neighbour.
+- Complexity of `O(n^2)`
 
 
 ### Merge Sort
 
+- Divide and conquer algorithm (breaks down problem into multiple subproblems to solve recursively).
+- Method:
+  - Split array in half
+  - Call merge sort on each half
+  - Merge both sorted halves into one sorted array
+- Complexity of `O(n * log(n))`
+
 ### Quicksort
+
+- Another divide and conquer algorithm.
+- Method:
+  - Choose pivot element
+  - Store elements less than the pivot element in left subarray, and those greater in the right subarray
+  - Call quicksort recursively on the left and right subarrays until array sizes are 1.
+- Complexity of `O(n * log(n))` in best case, `O(n^2)` in worst case
+
 
 ### Timsort
 
